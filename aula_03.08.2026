@@ -5,3 +5,13 @@ import Sobre from "./fonte/telas/sobre";
 import Login from "./fonte/telas/Login";
 import Flex from "./fonte/telas/Flex";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
+const Stack = createNativeStackNavigator();
+export default function App(){
+return (<NavigationContainer><Stack.Navigator>
+<Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
+<Stack.Screen name="Sobre" component={Sobre}/>
+<Stack.Screen name="Login" component={Login}/>
+<Stack.Screen name="Flex" component={Flex}/>
+
+</NavigationContainer></Stack.Navigator>)
+}
