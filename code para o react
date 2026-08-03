@@ -19,3 +19,9 @@ import {view, text} from 'react-native';
 export default function flex(){
 return (<view><text>flex</text></view>)
 }
+
+fonte
+Flex.js
+Home.js
+Login.js
+Sobre.js
