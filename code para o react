@@ -1,0 +1,8 @@
+npx create-expo-app@latest componente --template blank
+
+cd
+
+npx expo install react-dom react-native-web
+
+npm run web
+
