@@ -15,3 +15,15 @@ return (<NavigationContainer><Stack.Navigator>
 
 </NavigationContainer></Stack.Navigator>)
 }
+
+home.js
+import {view, text, button} from 'react-native';
+import {useNavgation} from '@react-navigation/native';
+export default function home(){
+return(<view>
+<text>Bem-vindo</text>{/*JSX*/}
+<button title="Sobre nós" onPress={()=>nav.navigate('sobre')}/>{/*quando uma função tiver apenas uma linha  de codigo,nao precisa de chaves na arrow function*/}
+<button title="Entrar" onPress={()=nav.navigate('login')}/>
+<button title= "Estudo sobre Flex onPress={()=>nav.navigate('Flex')}"/>
+</view>)
+}
