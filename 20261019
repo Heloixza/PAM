@@ -1,0 +1,22 @@
+import {createClient} from '@supabase/supabase-js';
+
+const supabaseUrl ='https://zpounzhnropnldhfbitl.supabase.co';
+const supabaseAnonKey = 'sb_publishable_Us1XXFEeNVYsbFmR0BA7zw_Ex4IC_F4'
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+async function testarConexao(Clientes) {
+try{
+// tenta ler 1 registro da tabela anônimamente 
+const {data, error } = await supabase
+.from(nomeTabela)
+.select('*');
+if (error) {
+    console.error(`Erro de acesso à tabela '${nomeTabela}':`, error.menssage);
+} else {
+    console.log(`Acesso anônimo à tabela '${nomeTabela}' funcionou! Data:` data);
+}
+}    catch (err) {
+console.error('Erro inesperado na requisição:' err);
+}}
+
+// Substitua 'sua_tabela' pelo nome exato da tabela no seu banco
+testarConexao('Clientes');
